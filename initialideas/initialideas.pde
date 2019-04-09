@@ -2,6 +2,14 @@
 ////aljhfdsalk;hga;skhdjgas;h
 
 int[] angles = { 30, 10, 45, 35, 60, 38, 75, 67 };
+Table animeList = loadTable("Anime.csv","header");
+
+TableRow row = animeList.getRow(0);
+
+float name = row.getInt("name");
+float score = row.getInt("score");
+float episodes = row.getInt("episodes");
+float rank = row.getInt("rank");
 
 void setup() {
   size(640, 360);
