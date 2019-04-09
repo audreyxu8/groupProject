@@ -3,28 +3,22 @@
 
 Table animeList; 
 
-void setup(){
-  animeList = loadTable("Anime.csv","header");
+  animeList = loadTable("AnimeList.csv", "header");
  
-    for (int i = 0; i < animeList.getRowCount(); i++){
+    //for (int i = 0; i < animeList.getRowCount(); i++){
 
-    TableRow row = animeList.getRow(i);
-  
-    String n = row.getString("name");
+    TableRow row = animeList.getRow(50);
+    //float id = row.getInt("animeID");
+    String n = row.getString("title");
+    float score = row.getFloat("score");
+    float episodes = row.getInt("episodes");
+    String studio = row.getString("studio");
+    println(score);
+    
+    //}
 
-    println(n);
-    }
-  
-}
-
-
-
-
-//float name = row.getInt("name");
-//float score = row.getInt("score");
-//float episodes = row.getInt("episodes");
 //float rank = row.getInt("rank");
-//float studio = row.getInt("studio");
+
 
 //void setup() {
 //  size(640, 360);
