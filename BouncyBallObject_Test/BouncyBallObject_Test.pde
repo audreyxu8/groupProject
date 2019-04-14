@@ -5,7 +5,7 @@
 
 int numBounce = 10;
 ArrayList<Ball> bounceyBall = new ArrayList<Ball>();
-Table animeList;
+Table animeList = loadTable("AnimeList.csv", "header");
 
 void setup(){
  background(19,31,31);
@@ -16,14 +16,12 @@ void setup(){
   bounceyBall.add(new Ball());
    
  }
- animeList = new Table();
-  
- animeList = loadTable("AnimeList.csv","header");
-
+ 
 TableRow row = animeList.getRow(int(random(100)));
 
 //String name = row.getString("name");
 float score = row.getFloat("score");
+String n = row.getString("title");
 
 println(score);
 saveTable(animeList, "AnimeList.csv");

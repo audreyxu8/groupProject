@@ -3,13 +3,14 @@ class Ball
   float xPos, yPos, xSpeed, ySpeed;
   float size;
   color fill;
+  String title; 
   
-  Ball()
+  Ball(float xPos_, float yPos_, float size_, String s)
   {
-    size = random(50,80);
-    fill = color(117,247,238);
-    xPos = random(0, width);
-    yPos = random(0, height);
+   xPos = xPos_;
+   yPos = yPos_; 
+   size = size_;
+   title = s;
     
     float xDir = random (-1, 1);
     float yDir = random (-1, 1);

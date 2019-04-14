@@ -1,9 +1,11 @@
 // HHaiiiiiiii <3 
 ////aljhfdsalk;hga;skhdjgas;h
-
+Button buttons;
 Table animeList; 
 
   animeList = loadTable("AnimeList.csv", "header");
+  
+  buttons = new Button[animeList.getRowCount()];
  
     //for (int i = 0; i < animeList.getRowCount(); i++){
 
@@ -11,8 +13,8 @@ Table animeList;
     //float id = row.getInt("animeID");
     String n = row.getString("title");
     float score = row.getFloat("score");
-    float episodes = row.getInt("episodes");
-    String studio = row.getString("studio");
+    //float episodes = row.getInt("episodes");
+    //String studio = row.getString("studio");
     println(score);
     
     //}
