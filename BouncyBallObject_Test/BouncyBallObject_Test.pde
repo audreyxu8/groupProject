@@ -47,6 +47,6 @@ void loadData(){
     TableRow row = animeList.getRow(i);
     float score = row.getFloat("score");
     String n = row.getString("title");
-    balls[i] = new Ball(random(width),random(height),score,n);
+    balls[i] = new Ball(score,n);
   }
 }
