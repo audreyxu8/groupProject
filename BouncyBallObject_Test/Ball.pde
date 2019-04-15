@@ -4,6 +4,7 @@ class Ball
   float size;
   color fill;
   String title; 
+  boolean over = false;
   
   Ball(float xPos_, float yPos_, float size_, String s)
   {
@@ -77,4 +78,13 @@ class Ball
        }
       }
     }
+}
+
+void rollover(float xPos_, float yPos_, float size_){
+    float disX = xPos_ - mouseX;
+    float disY = yPos_ - mouseY;
+    if (sqrt(sq(disX) + sq(disY)) < size_/2 ) {
+      textAlign(CENTER);
+      fill (255); 
+    } 
 }
