@@ -12,9 +12,6 @@ void setup(){
  size(1000,1000);
  noStroke();
  loadData();
- 
- //for(int i =0; i <numBounce; i++){
- // bounceyBall.add(new Ball());
    
  }
 
@@ -47,6 +44,6 @@ void loadData(){
     TableRow row = animeList.getRow(i);
     float score = row.getFloat("score");
     String n = row.getString("title");
-    balls[i] = new Ball(score,n);
+    balls[i] = new Ball(score*10,n);
   }
 }

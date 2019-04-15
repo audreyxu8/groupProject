@@ -37,9 +37,17 @@ class Ball
 
   void display()
   {
-    fill(fill);
+    stroke(0);
+    strokeWeight(2);
+    fill(255);
     ellipse(xPos, yPos, size, size);
+    if (over) {
+      fill(0);
+      textAlign(CENTER);
+      text(title, xPos, yPos+size/2+20);
+    }
   }
+
 
   void move()
   {
@@ -77,12 +85,12 @@ class Ball
     }
   }
 
-  void rollover (float xPos, float yPos) {
-    float disX = xPos - mouseX;
-    float disY = yPos - mouseY;
-    if (sqrt(sq(disX) + sq(disY)) < size_/2 ) {
-      textAlign(CENTER);
-      fill (255);
+  void rollover (float px, float py) {
+    float d = dist(px, py, xPos, yPos);
+    if (d<size/2) {
+      over = true;
+    } else {
+      over = false;
     }
   }
 }
