@@ -18,8 +18,9 @@ void setup(){
 
 void draw(){
   background(0);
-  for (int i = 0; i < balls.length; i++){
+  for (int i = 0; i < 100; i++){
     balls[i].display();
+    balls[i].move();
     balls[i].rollover(mouseX, mouseY);
   }
   
@@ -44,6 +45,7 @@ void loadData(){
     TableRow row = animeList.getRow(i);
     float score = row.getFloat("score");
     String n = row.getString("title");
-    balls[i] = new Ball(score*10,n);
+    String img = row.getString("image_url");
+    balls[i] = new Ball((score-5)*25,n);
   }
 }

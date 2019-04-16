@@ -42,7 +42,7 @@ class Ball
     fill(255);
     ellipse(xPos, yPos, size, size);
     if (over) {
-      fill(0);
+      fill(100,0,100);
       textAlign(CENTER);
       text(title, xPos, yPos+size/2+20);
     }
@@ -51,8 +51,11 @@ class Ball
 
   void move()
   {
-    xPos += xSpeed;
-    yPos += ySpeed;
+    
+    xPos += xSpeed*size;
+    yPos += ySpeed*size;
+    
+   
   }
 
   void checkBoundaries()
