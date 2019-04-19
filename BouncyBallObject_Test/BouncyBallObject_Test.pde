@@ -6,11 +6,13 @@
 int numBounce = 10;
 ArrayList<Ball> bounceyBall = new ArrayList<Ball>();
 Table animeList;
+Ball [] Ball;
 
 void setup(){
  background(19,31,31);
  size(1000,1000);
  noStroke();
+
  
  for(int i =0; i <numBounce; i++){
   bounceyBall.add(new Ball());
@@ -22,8 +24,9 @@ void setup(){
 
 TableRow row = animeList.getRow(int(random(100)));
 
-//String name = row.getString("name");
+String name = row.getString("name");
 float score = row.getFloat("score");
+
 
 println(score);
 saveTable(animeList, "AnimeList.csv");
@@ -32,6 +35,7 @@ saveTable(animeList, "AnimeList.csv");
 
 void draw(){
   background(0);
+ 
   
  //for each bouncey ball in the bounceyBall list....
  for(Ball b: bounceyBall){
@@ -39,6 +43,7 @@ void draw(){
    b.checkCollision(bounceyBall);
    b.move();
    b.display();
+   b.loadData();
  }
   
 }

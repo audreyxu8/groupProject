@@ -1,8 +1,11 @@
 class Ball
 {
+  
   float xPos, yPos, xSpeed, ySpeed;
   float size;
   color fill;
+ // float score = row.getFloat("score");
+
   
   Ball()
   {
@@ -76,4 +79,21 @@ class Ball
        }
       }
     }
+    
+ void loadData(){
+  animeList = loadTable("AnimeList.csv","header");
+  Ball = new Ball[animeList.getRowCount()];
+   for (int i = 0; i<animeList.getRowCount(); i++) {
+    // Iterate over all the rows in a table.
+    TableRow row = animeList.getRow(i);
+
+  
+    // Access the fields via their column name (or index).
+   float x = row.getFloat("score");
+    //String n = row.getString("name");
+      
+    // Make a Bubble object out of the data from each row.
+    Ball[i] = new Ball(x,,xPos,yPos);
+  }
+}
 }
