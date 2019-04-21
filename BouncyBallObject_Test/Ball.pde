@@ -5,9 +5,7 @@ class Ball
   float size;
   color fill;
   String title; 
-  boolean over = false;
-  PGraphics mask;
-  PImage img; 
+  boolean over = false; 
 
   Ball(float size_, String s)
   {
