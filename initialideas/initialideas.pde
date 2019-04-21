@@ -1,11 +1,20 @@
 // HHaiiiiiiii <3 
 ////aljhfdsalk;hga;skhdjgas;h
+<<<<<<< HEAD
 Table AnimeList; 
 //animeBubbles [] bubbles;
 
 void setup()
 {
   AnimeList = loadTable("AnimeList.csv", "header");
+=======
+Button buttons;
+Table animeList; 
+
+  animeList = loadTable("AnimeList.csv", "header");
+  
+  buttons = new Button[animeList.getRowCount()];
+>>>>>>> 15eec1fc539c6e9b23ada7212efa1e1260dc7590
  
    size(700,760);
    loadData();
@@ -15,8 +24,8 @@ void setup()
     //float id = row.getInt("animeID");
     String n = row.getString("title");
     float score = row.getFloat("score");
-    float episodes = row.getInt("episodes");
-    String studio = row.getString("studio");
+    //float episodes = row.getInt("episodes");
+    //String studio = row.getString("studio");
     println(score);
 }
     

@@ -4,7 +4,7 @@
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 int numBounce = 10;
-ArrayList<Ball> bounceyBall = new ArrayList<Ball>();
+Ball [] balls;
 Table animeList;
 Ball [] Ball;
 
@@ -12,6 +12,7 @@ void setup(){
  background(19,31,31);
  size(1000,1000);
  noStroke();
+<<<<<<< HEAD
 
  
  for(int i =0; i <numBounce; i++){
@@ -45,5 +46,45 @@ void draw(){
    b.display();
    b.loadData();
  }
+=======
+ loadData();
+   
+ }
+
+
+void draw(){
+  background(0);
+  for (int i = 0; i < 100; i++){
+    balls[i].display();
+    balls[i].move();
+    balls[i].checkBoundaries();
+    //balls[i].checkCollision(balls);
+    balls[i].rollover(mouseX, mouseY);
+  }
   
+  textAlign(LEFT);
+  fill(0);
+  
+ //for each bouncey ball in the bounceyBall list....
+ //for(Ball b: bounceyBall){
+ //  b.checkBoundaries();
+ //  b.checkCollision(bounceyBall);
+ //  b.move();
+ //  b.display();
+ //}
+  
+}
+
+void loadData(){
+  animeList = loadTable("AnimeList.csv", "header");
+  balls = new Ball[animeList.getRowCount()];
+>>>>>>> 15eec1fc539c6e9b23ada7212efa1e1260dc7590
+  
+  for (int i=0; i < animeList.getRowCount(); i++){
+    TableRow row = animeList.getRow(i);
+    float score = row.getFloat("score");
+    String n = row.getString("title");
+    String img = row.getString("image_url");
+    balls[i] = new Ball((score-5)*25,n);
+  }
 }
