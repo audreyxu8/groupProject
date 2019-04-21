@@ -45,6 +45,10 @@ class Ball
     fill(255);
     ellipse(xPos, yPos, size, size);
     if (over) {
+      PFont font;
+      font = loadFont ("Exo-Regular-48.vlw");
+      textFont(font);
+      textSize(20);
       fill(100,0,100);
       textAlign(CENTER);
       text(title, xPos, yPos+size/2+20);
