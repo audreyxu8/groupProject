@@ -21,6 +21,8 @@ void draw(){
   for (int i = 0; i < 100; i++){
     balls[i].display();
     balls[i].move();
+    balls[i].checkBoundaries();
+    //balls[i].checkCollision(balls);
     balls[i].rollover(mouseX, mouseY);
   }
   

@@ -52,8 +52,8 @@ class Ball
   void move()
   {
     
-    xPos += xSpeed*size;
-    yPos += ySpeed*size;
+    xPos += xSpeed/size*4;
+    yPos += ySpeed/size*4;
     
    
   }
@@ -71,9 +71,9 @@ class Ball
     }
   }
 
-  void checkCollision(ArrayList<Ball> bounceyBall)
+  void checkCollision(Ball[] balls)
   {
-    for (Ball b : bounceyBall)
+    for (Ball b : balls)
     {
       float d = dist(xPos, yPos, b.xPos, b.yPos);
       float sumRad = size/2 + b.size/2;
