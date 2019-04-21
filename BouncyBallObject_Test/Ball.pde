@@ -1,20 +1,15 @@
 class Ball
 {
-  
+ 
   float xPos, yPos, xSpeed, ySpeed;
   float size;
   color fill;
-<<<<<<< HEAD
- // float score = row.getFloat("score");
-
-  
-  Ball()
-=======
   String title; 
   boolean over = false;
+  PGraphics mask;
+  PImage img; 
 
   Ball(float size_, String s)
->>>>>>> 15eec1fc539c6e9b23ada7212efa1e1260dc7590
   {
     xPos = random(width);
     yPos = random(height); 
@@ -40,6 +35,7 @@ class Ball
     {
       ySpeed =-1;
     }
+    
   }
 
 
@@ -94,25 +90,6 @@ class Ball
         b.ySpeed *=-1;
       }
     }
-<<<<<<< HEAD
-    
- void loadData(){
-  animeList = loadTable("AnimeList.csv","header");
-  Ball = new Ball[animeList.getRowCount()];
-   for (int i = 0; i<animeList.getRowCount(); i++) {
-    // Iterate over all the rows in a table.
-    TableRow row = animeList.getRow(i);
-
-  
-    // Access the fields via their column name (or index).
-   float x = row.getFloat("score");
-    //String n = row.getString("name");
-      
-    // Make a Bubble object out of the data from each row.
-    Ball[i] = new Ball(x,,xPos,yPos);
-  }
-}
-=======
   }
 
   void rollover (float px, float py) {
@@ -123,5 +100,4 @@ class Ball
       over = false;
     }
   }
->>>>>>> 15eec1fc539c6e9b23ada7212efa1e1260dc7590
 }
