@@ -1,10 +1,18 @@
+<<<<<<< HEAD
+=======
+import processing.sound.*;
+SoundFile file;
+>>>>>>> a1d149c146b1a26b22587bdefaaaad9ba5af0bd4
 int numBounce = 10;
 
 Ball [] balls;
 
 Table animeList;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> a1d149c146b1a26b22587bdefaaaad9ba5af0bd4
 
 void setup(){
 
@@ -21,6 +29,7 @@ void setup(){
   }
 
  noStroke();
+<<<<<<< HEAD
 
  loadData();
  
@@ -36,18 +45,32 @@ void setup(){
 
 
 void draw(){
+=======
+ loadData();
+ 
+ file = new SoundFile(this, "cowboy.mp3");
+ file.play();
+ }
+>>>>>>> a1d149c146b1a26b22587bdefaaaad9ba5af0bd4
 
 
   for (int i = 0; i < 100; i++){
 
     balls[i].display();
+<<<<<<< HEAD
 
     balls[i].rollover(mouseX, mouseY);
 
+=======
+    balls[i].rollover(mouseX, mouseY);
+>>>>>>> a1d149c146b1a26b22587bdefaaaad9ba5af0bd4
     balls[i].move();
 
     balls[i].checkBoundaries();
+<<<<<<< HEAD
 
+=======
+>>>>>>> a1d149c146b1a26b22587bdefaaaad9ba5af0bd4
   }
 
   
@@ -83,7 +106,10 @@ void loadData(){
   animeList = loadTable("AnimeList.csv", "header");
 
   balls = new Ball[animeList.getRowCount()];
+<<<<<<< HEAD
 
+=======
+>>>>>>> a1d149c146b1a26b22587bdefaaaad9ba5af0bd4
   
 
   for (int i=0; i < animeList.getRowCount(); i++){
@@ -93,9 +119,13 @@ void loadData(){
     float score = row.getFloat("score");
 
     String n = row.getString("title");
+<<<<<<< HEAD
 
     balls[i] = new Ball(score-4*25,n);
 
+=======
+    balls[i] = new Ball((score-5)*25,n);
+>>>>>>> a1d149c146b1a26b22587bdefaaaad9ba5af0bd4
   }
 
 }

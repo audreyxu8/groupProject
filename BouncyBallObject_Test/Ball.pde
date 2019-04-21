@@ -2,18 +2,27 @@
 class Ball
 
 {
+<<<<<<< HEAD
 
 
 
+=======
+ 
+>>>>>>> a1d149c146b1a26b22587bdefaaaad9ba5af0bd4
   float xPos, yPos, xSpeed, ySpeed;
 
   float size;
 
   color fill;
+<<<<<<< HEAD
 
   String title; 
 
   boolean over = false;
+=======
+  String title; 
+  boolean over = false; 
+>>>>>>> a1d149c146b1a26b22587bdefaaaad9ba5af0bd4
 
   PGraphics mask;
 
@@ -22,7 +31,10 @@ class Ball
 
 
   Ball(float size_, String s)
+<<<<<<< HEAD
 
+=======
+>>>>>>> a1d149c146b1a26b22587bdefaaaad9ba5af0bd4
   {
 
     xPos = random(width);
@@ -72,9 +84,13 @@ class Ball
       ySpeed =-1;
 
     }
+<<<<<<< HEAD
 
     
 
+=======
+    
+>>>>>>> a1d149c146b1a26b22587bdefaaaad9ba5af0bd4
   }
 
 
@@ -182,7 +198,10 @@ class Ball
       }
 
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a1d149c146b1a26b22587bdefaaaad9ba5af0bd4
   }
 
 
@@ -202,5 +221,8 @@ class Ball
     }
 
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a1d149c146b1a26b22587bdefaaaad9ba5af0bd4
 }
