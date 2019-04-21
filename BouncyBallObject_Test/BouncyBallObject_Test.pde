@@ -7,7 +7,7 @@ Table animeList;
 void setup() {
   size(1920, 1000);
   noStroke();
-  
+
   //for (int i = 0; i < width; i++) {
   //  for (int j = 0; j < height; j++) {
   //    float r = map(i, 0, width, 0, 255);
@@ -25,8 +25,11 @@ void setup() {
 }
 
 void draw() {
-  
-  background(255,176,34);
+  float r = map(mouseX, 0, width, 100, 255);
+  float g = map(mouseX, 0, height, 100, 255);
+  float b = map(mouseY, 0, width, 255, 0);
+
+  background(r,g,b);
   for (int i = 0; i < 100; i++) {
     balls[i].display();
     balls[i].rollover(mouseX, mouseY);
