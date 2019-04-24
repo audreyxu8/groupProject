@@ -1,19 +1,21 @@
 
 class Ball
 {
- 
+ int faceVal;
   float xPos, yPos, xSpeed, ySpeed;
   float size;
   color fill;
   String title; 
   boolean over = false; 
 
-  Ball(float size_, String s)
+  Ball(float size_, String s, color c)
   {
     xPos = random(width);
     yPos = random(height); 
+    faceVal = (int)random(1,9);
     size = size_;
     title = s;
+    fill = c;
 
     float xDir = random (-1, 1);
     float yDir = random (-1, 1);
@@ -40,10 +42,39 @@ class Ball
 
   void display()
   {
+    
     stroke(0);
     strokeWeight(2);
-    fill(255);
+    fill(fill);
     ellipse(xPos, yPos, size, size);
+     imageMode(CENTER);
+     if (faceVal == 1){
+  image(face1,xPos,yPos,size,size);
+     }
+     if (faceVal == 2){
+  image(face2,xPos,yPos,size,size);
+     }
+     if (faceVal == 3){
+  image(face3,xPos,yPos,size,size);
+     }
+     if (faceVal == 4){
+  image(face4,xPos,yPos,size,size);
+     }
+     if (faceVal == 5){
+  image(face5,xPos,yPos,size,size);
+     }
+     if (faceVal == 6){
+  image(face6,xPos,yPos,size,size);
+     }
+     if (faceVal == 7){
+  image(face7,xPos,yPos,size,size);
+     }
+     if (faceVal == 8){
+  image(face8,xPos,yPos,size,size);
+     }
+     if (faceVal == 9){
+  image(face9,xPos,yPos,size,size);
+     }
     if (over) {
       PFont font;
       font = loadFont ("Exo-Regular-48.vlw");
@@ -59,8 +90,8 @@ class Ball
   void move()
   {
     
-    xPos += xSpeed/size*4;
-    yPos += ySpeed/size*4;
+    xPos += xSpeed/size*10;
+    yPos += ySpeed/size*10;
     
    
   }
